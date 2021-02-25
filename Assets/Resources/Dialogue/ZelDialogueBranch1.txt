@@ -1,0 +1,9 @@
+1
+1
+He knows.
+Null
+Null
+ZelDialogueBranch1-1
+TreeOption2
+TreeOption3
+A weird guy with a staff? You must mean Xellos. Why are you searching for him?

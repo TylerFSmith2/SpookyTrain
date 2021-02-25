@@ -1,0 +1,10 @@
+1
+2
+Staff guy.
+No.
+Answer3
+GourryDialogueBranch2-1
+GourryDialogueBranch2-2
+TreeOption3
+Yeah, it's a strange place to be. We'll figure it out though.
+Do you need any help? Other than waiting for those two up ahead to calm down, I'm not doing anything.

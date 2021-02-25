@@ -1,0 +1,10 @@
+1
+1
+02 Item
+Answer2
+Answer3
+XellosDialogueBranch2-1
+XellosDialogueBranch1-2
+TreeOption3
+That's a secret~
+Now, you're looking for an item, yes? What is it?

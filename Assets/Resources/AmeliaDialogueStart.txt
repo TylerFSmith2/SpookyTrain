@@ -1,0 +1,10 @@
+1
+2
+Sure!
+No...
+Null
+AmeliaDialogueBranch1
+AmeliaDialogueBranch2
+TreeOption3
+Shut up Lina! I'm trying to think!
+Hey, could you shut her up for me? I can't get anything done with her wailing.

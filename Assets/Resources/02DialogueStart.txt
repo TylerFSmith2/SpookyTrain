@@ -1,0 +1,10 @@
+1
+2
+Okay
+No
+Null
+02DialogueBranch1
+02DialogueBranch2
+TreeOption3
+Hey, I'm Zero Two. Care to help me out?
+I'm looking for an item. It's in the next car over.

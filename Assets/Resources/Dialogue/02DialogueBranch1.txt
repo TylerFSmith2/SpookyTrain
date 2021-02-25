@@ -1,0 +1,10 @@
+1
+1
+Who are you?
+Answer2
+Answer3
+02DialogueBranch1-1
+TreeOption2
+TreeOption3
+Yes? Cool! Bring it back when you find it! There was this weird guy with a staff in the third car that saw it, but he didn't tell me anything.
+I'll stay here so you can find me easy.

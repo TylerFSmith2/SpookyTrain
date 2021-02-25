@@ -1,0 +1,10 @@
+1
+1
+Train pass?
+Null
+Null
+MuzanDialogueBranch1
+TreeOption2
+TreeOption3
+Who are you?
+No matter. Show me your train pass, please.
