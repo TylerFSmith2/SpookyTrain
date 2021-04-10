@@ -12,6 +12,25 @@ public class PlayerInteractables : MonoBehaviour
 
     public GameObject ShowInteractableName;
 
+    public void Interact()
+    {
+        toInteract.Interact();
+        if (toInteract.GetComponent<PickUp>() != null)
+        {
+            interactables.Remove(toInteract);
+            toInteract = null;
+        }
+    }
+
+    public void RemoveItem(Interactable toRemove)
+    {
+        if(interactables.Contains(toRemove))
+        {
+            interactables.Remove(toRemove);
+        }
+    }
+
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Interactable>() != null)
@@ -25,7 +44,6 @@ public class PlayerInteractables : MonoBehaviour
         if (other.GetComponent<Interactable>() != null)
         {
             interactables.Remove(other.gameObject.GetComponent<Interactable>());
-            p.SetCurrentInteractable(null);
         }
     }
 
@@ -44,6 +62,10 @@ public class PlayerInteractables : MonoBehaviour
         Interactable prev = toInteract;
         foreach (Interactable i in interactables)
         {
+            if(i == null)
+            {
+                continue;
+            }
             if (dist > Vector3.Distance(i.gameObject.transform.position, p.transform.position))
             {
                 dist = Vector3.Distance(i.gameObject.transform.position, p.transform.position);
@@ -57,7 +79,6 @@ public class PlayerInteractables : MonoBehaviour
             {
                 prev.RemoveHighlight();
             }
-            p.SetCurrentInteractable(toInteract);
             toInteract.Highlight();
         }
 
@@ -71,4 +92,6 @@ public class PlayerInteractables : MonoBehaviour
             ShowInteractableName.GetComponentInChildren<Text>().text = toInteract.name;
         }
     }
+
+    
 }

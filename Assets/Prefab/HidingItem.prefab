@@ -121,7 +121,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3158df4aae5630a46a3aa6a004e5a423, type: 2}
+  - {fileID: 2100000, guid: 2507e7902df27b343b3196be1f87cee1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -156,7 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 0}
-  col: {fileID: 2100000, guid: 3158df4aae5630a46a3aa6a004e5a423, type: 2}
+  notificationPanel: {fileID: 0}
+  col: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!65 &448459308
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -213,7 +214,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.7325124, b: 0, a: 1}
-  m_Intensity: 422.08
+  m_Intensity: 100
   m_Range: 3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208

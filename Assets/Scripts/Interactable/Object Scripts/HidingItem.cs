@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HidingItem : Interactable
 {
-
     public Material col;
 
     public override void Interact()
@@ -18,7 +18,7 @@ public class HidingItem : Interactable
 
     public override void Highlight()
     {
-        col.SetColor("_Color", Color.magenta);
+        col.SetColor("_Color", Color.red);
     }
 
     public override void RemoveHighlight()

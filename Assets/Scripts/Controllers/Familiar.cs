@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class Familiar : MonoBehaviour
 {
-    public bool familiarActive = false;
-
     public float moveSpeed = 7;
 
     public GameObject player;
+
+    public bool pulse;
+    public GameObject pulseAOE;
 
     public List<Collider> Enemies = new List<Collider>();
 
     // Update is called once per frame
     void Update()
     {
-        if (familiarActive)
+        if(pulse)
+        {
+            PulseAbility();
+        }
+        if (player.GetComponent<Character>().familiarActive)
         {
             //Control player movement
             float Hmovement = Input.GetAxis("Horizontal");
@@ -29,17 +34,17 @@ public class Familiar : MonoBehaviour
             }
 
             //Burst Ability
-            if (Input.GetKeyDown(KeyCode.V))
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 //Animation
-                //Draw monsters closer
-                PulseAbility();
+                //Paralyze everything near it
+                pulse = true;
+                pulseAOE.SetActive(true);
             }
-            
-            //Deactivate Familiar
-            if(Input.GetKeyDown(KeyCode.Q))
+            if(Hmovement != 0 || Vmovement != 0)
             {
-                StopFamiliar();
+                pulse = false;
+                pulseAOE.SetActive(false);
             }
         }
     }
@@ -48,7 +53,7 @@ public class Familiar : MonoBehaviour
     {
         foreach(Collider c in Enemies)
         {
-            c.GetComponent<Paimon>().StartPara(40f);
+            c.GetComponent<Paimon>().StartPara(1f);
         }
     }
 
@@ -68,20 +73,14 @@ public class Familiar : MonoBehaviour
         }
     }
 
+    public void DecolorEnemies()
 
-    public void StartFamiliar()
     {
-        familiarActive = true;
-    }
-
-    public void StopFamiliar()
-    {
-        familiarActive = false;
         foreach (Collider c in Enemies)
         {
             c.GetComponent<CreaturesAbstract>().RemoveColor();
         }
-        player.GetComponent<Character>().DeactivateFamiliar();
+        //player.GetComponent<Character>().DeactivateFamiliar();
     }
 
     public void SetPlayer(GameObject p)

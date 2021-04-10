@@ -11,6 +11,9 @@ public class Door : Interactable
     public SpriteRenderer sr;
 
     public bool unlocked;
+
+    public string unlockMechanism;
+
     public override void Interact()
     {
         //Go to place
@@ -21,7 +24,15 @@ public class Door : Interactable
         }
         else
         {
-            Fade("Door is locked");
+            if(p.GetComponent<Inventory>().CheckForAndUseItem(unlockMechanism))
+            {
+                unlocked = true;
+                p.transform.position = placeToGo.position;
+            }
+            else
+            {
+                Fade("Door is locked");
+            }
         }
     }
 
